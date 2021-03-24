@@ -1,0 +1,92 @@
+<?php
+/**
+ * Created by iTec Assist
+ * Website: https://itecassist.co.za
+ * User: Stuart Harrison
+ * Date: 2020-06-08
+ * Time: 05:06:23 AM
+ */
+
+return [
+	'title'=>'Employees',
+	'fields'=>[
+		'certificate_number'		=>'Certificate Number',
+		'type_of_certificate'		=>'Type Of Certificate',
+		'nature_of_person'		=>'Nature Of Person',
+		'employee_code'		=>'Employee Code',
+		'title'		=>'Title',
+		'surname'		=>'Surname',
+		'first_name'		=>'First Name',
+		'second_name'		=>'Second Name',
+		'initials'		=>'Initials',
+		'known_as'		=>'Known As',
+		'gender'		=>'Gender',
+		'id_number'		=>'RSA ID Number',
+		'passport_number'		=>'Passport Number',
+		'passport_country'		=>'Passport Country',
+		'date_of_birth'		=>'Date Of Birth',
+		'tax_reference_number'		=>'Tax Reference Number',
+		'tax_type'		=>'Tax Type',
+		'directive_1'		=>'Directive 1',
+		'directive_2'		=>'Directive 2',
+		'directive_3'		=>'Directive 3',
+		'reason_no_uif'		=>'Reason No Uif',
+		'retired'		=>'Retired',
+		'registered_medical_aid'		=>'Registered Medical Aid',
+		'medical_aid_members'		=>'Medical Aid Members',
+		'employed_from'		=>'Employed From',
+		'employed_to'		=>'Employed To',
+		'periods_worked'		=>'Periods Worked',
+		'payment_type'		=>'Payment Type',
+		'is_active'		=>'Is Active',
+        'is_asylum_seeker'     =>'This employee is an asylum seeker',
+        'asylum_permint'=>'Asylum Seeker Permit Number',
+        'is_refugee'    =>'This employee is a refugee',
+        'physical_address_unit_number'      =>'Unit Number',
+        'physical_address_complex_name'     =>'Complex Name',
+        'physical_address_street_number'    =>'Street Number',
+        'physical_address_street_name'      =>'Street/Farm Name',
+        'physical_address_suburb'           =>'Suburb/District',
+        'physical_address_city'             =>'City/Town',
+        'physical_address_code'             =>'Postal Code',
+        'physical_address_country'          =>'Country',
+        'postal_address_type',
+        'postal_postbox_type',
+        'postal_number',
+        'postal_agency',
+        'postal_post_office_name',
+        'postal_unit_numer',
+        'postal_complex_name',
+        'postal_street_number',
+        'postal_street_name',
+        'postal_suburb',
+        'postal_city',
+        'postal_code',
+        'postal_country',
+        'postal_care_of',
+        'postal_care_of_details',
+        'work_unit_number',
+        'work_complex_name',
+        'work_street_number',
+        'work_street_name',
+        'work_suburb',
+        'work_city',
+        'work_code',
+        'work_country',
+        'contact_mobile_number'     =>'Mobile',
+        'contact_email'             =>'Email',
+        'contact_home_number'       =>'Home Number',
+        'contact_work_number'       =>'Waork Number',
+        'contact_fax_number'        =>'Fax',
+        'emergency_name'        =>'Name',
+        'emergency_number1'     =>'Number 1',
+        'emergency_number2'     =>'Number 2',
+        'compensation_pay_type' =>'Compensation Type',
+        'compensation_pay_schedule'=>'Compensation Schedule'
+    ],
+    'help'  =>[
+
+        'id_number' =>'RSA ID Number not valid!',
+    ]
+
+];

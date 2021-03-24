@@ -1,0 +1,844 @@
+F ; G 5202
+U 65024 ; WX 0 ; N uniFE00 ; G 5203
+U 65025 ; WX 0 ; N uniFE01 ; G 5204
+U 65026 ; WX 0 ; N uniFE02 ; G 5205
+U 65027 ; WX 0 ; N uniFE03 ; G 5206
+U 65028 ; WX 0 ; N uniFE04 ; G 5207
+U 65029 ; WX 0 ; N uniFE05 ; G 5208
+U 65030 ; WX 0 ; N uniFE06 ; G 5209
+U 65031 ; WX 0 ; N uniFE07 ; G 5210
+U 65032 ; WX 0 ; N uniFE08 ; G 5211
+U 65033 ; WX 0 ; N uniFE09 ; G 5212
+U 65034 ; WX 0 ; N uniFE0A ; G 5213
+U 65035 ; WX 0 ; N uniFE0B ; G 5214
+U 65036 ; WX 0 ; N uniFE0C ; G 5215
+U 65037 ; WX 0 ; N uniFE0D ; G 5216
+U 65038 ; WX 0 ; N uniFE0E ; G 5217
+U 65039 ; WX 0 ; N uniFE0F ; G 5218
+U 65056 ; WX 0 ; N uniFE20 ; G 5219
+U 65057 ; WX 0 ; N uniFE21 ; G 5220
+U 65058 ; WX 0 ; N uniFE22 ; G 5221
+U 65059 ; WX 0 ; N uniFE23 ; G 5222
+U 65136 ; WX 342 ; N uniFE70 ; G 5223
+U 65137 ; WX 342 ; N uniFE71 ; G 5224
+U 65138 ; WX 342 ; N uniFE72 ; G 5225
+U 65139 ; WX 346 ; N uniFE73 ; G 5226
+U 65140 ; WX 342 ; N uniFE74 ; G 5227
+U 65142 ; WX 342 ; N uniFE76 ; G 5228
+U 65143 ; WX 342 ; N uniFE77 ; G 5229
+U 65144 ; WX 342 ; N uniFE78 ; G 5230
+U 65145 ; WX 342 ; N uniFE79 ; G 5231
+U 65146 ; WX 342 ; N uniFE7A ; G 5232
+U 65147 ; WX 342 ; N uniFE7B ; G 5233
+U 65148 ; WX 342 ; N uniFE7C ; G 5234
+U 65149 ; WX 342 ; N uniFE7D ; G 5235
+U 65150 ; WX 342 ; N uniFE7E ; G 5236
+U 65151 ; WX 342 ; N uniFE7F ; G 5237
+U 65152 ; WX 511 ; N uniFE80 ; G 5238
+U 65153 ; WX 343 ; N uniFE81 ; G 5239
+U 65154 ; WX 375 ; N uniFE82 ; G 5240
+U 65155 ; WX 343 ; N uniFE83 ; G 5241
+U 65156 ; WX 375 ; N uniFE84 ; G 5242
+U 65157 ; WX 622 ; N uniFE85 ; G 5243
+U 65158 ; WX 627 ; N uniFE86 ; G 5244
+U 65159 ; WX 343 ; N uniFE87 ; G 5245
+U 65160 ; WX 375 ; N uniFE88 ; G 5246
+U 65161 ; WX 917 ; N uniFE89 ; G 5247
+U 65162 ; WX 917 ; N uniFE8A ; G 5248
+U 65163 ; WX 375 ; N uniFE8B ; G 5249
+U 65164 ; WX 408 ; N uniFE8C ; G 5250
+U 65165 ; WX 343 ; N uniFE8D ; G 5251
+U 65166 ; WX 375 ; N uniFE8E ; G 5252
+U 65167 ; WX 1005 ; N uniFE8F ; G 5253
+U 65168 ; WX 1059 ; N uniFE90 ; G 5254
+U 65169 ; WX 375 ; N uniFE91 ; G 5255
+U 65170 ; WX 408 ; N uniFE92 ; G 5256
+U 65171 ; WX 590 ; N uniFE93 ; G 5257
+U 65172 ; WX 606 ; N uniFE94 ; G 5258
+U 65173 ; WX 1005 ; N uniFE95 ; G 5259
+U 65174 ; WX 1059 ; N uniFE96 ; G 5260
+U 65175 ; WX 375 ; N uniFE97 ; G 5261
+U 65176 ; WX 408 ; N uniFE98 ; G 5262
+U 65177 ; WX 1005 ; N uniFE99 ; G 5263
+U 65178 ; WX 1059 ; N uniFE9A ; G 5264
+U 65179 ; WX 375 ; N uniFE9B ; G 5265
+U 65180 ; WX 408 ; N uniFE9C ; G 5266
+U 65181 ; WX 721 ; N uniFE9D ; G 5267
+U 65182 ; WX 721 ; N uniFE9E ; G 5268
+U 65183 ; WX 721 ; N uniFE9F ; G 5269
+U 65184 ; WX 721 ; N uniFEA0 ; G 5270
+U 65185 ; WX 721 ; N uniFEA1 ; G 5271
+U 65186 ; WX 721 ; N uniFEA2 ; G 5272
+U 65187 ; WX 721 ; N uniFEA3 ; G 5273
+U 65188 ; WX 721 ; N uniFEA4 ; G 5274
+U 65189 ; WX 721 ; N uniFEA5 ; G 5275
+U 65190 ; WX 721 ; N uniFEA6 ; G 5276
+U 65191 ; WX 721 ; N uniFEA7 ; G 5277
+U 65192 ; WX 721 ; N uniFEA8 ; G 5278
+U 65193 ; WX 513 ; N uniFEA9 ; G 5279
+U 65194 ; WX 578 ; N uniFEAA ; G 5280
+U 65195 ; WX 513 ; N uniFEAB ; G 5281
+U 65196 ; WX 578 ; N uniFEAC ; G 5282
+U 65197 ; WX 576 ; N uniFEAD ; G 5283
+U 65198 ; WX 622 ; N uniFEAE ; G 5284
+U 65199 ; WX 576 ; N uniFEAF ; G 5285
+U 65200 ; WX 622 ; N uniFEB0 ; G 5286
+U 65201 ; WX 1380 ; N uniFEB1 ; G 5287
+U 65202 ; WX 1414 ; N uniFEB2 ; G 5288
+U 65203 ; WX 983 ; N uniFEB3 ; G 5289
+U 65204 ; WX 1018 ; N uniFEB4 ; G 5290
+U 65205 ; WX 1380 ; N uniFEB5 ; G 5291
+U 65206 ; WX 1414 ; N uniFEB6 ; G 5292
+U 65207 ; WX 983 ; N uniFEB7 ; G 5293
+U 65208 ; WX 1018 ; N uniFEB8 ; G 5294
+U 65209 ; WX 1345 ; N uniFEB9 ; G 5295
+U 65210 ; WX 1364 ; N uniFEBA ; G 5296
+U 65211 ; WX 966 ; N uniFEBB ; G 5297
+U 65212 ; WX 985 ; N uniFEBC ; G 5298
+U 65213 ; WX 1345 ; N uniFEBD ; G 5299
+U 65214 ; WX 1364 ; N uniFEBE ; G 5300
+U 65215 ; WX 966 ; N uniFEBF ; G 5301
+U 65216 ; WX 985 ; N uniFEC0 ; G 5302
+U 65217 ; WX 1039 ; N uniFEC1 ; G 5303
+U 65218 ; WX 1071 ; N uniFEC2 ; G 5304
+U 65219 ; WX 942 ; N uniFEC3 ; G 5305
+U 65220 ; WX 974 ; N uniFEC4 ; G 5306
+U 65221 ; WX 1039 ; N uniFEC5 ; G 5307
+U 65222 ; WX 1071 ; N uniFEC6 ; G 5308
+U 65223 ; WX 942 ; N uniFEC7 ; G 5309
+U 65224 ; WX 974 ; N uniFEC8 ; G 5310
+U 65225 ; WX 683 ; N uniFEC9 ; G 5311
+U 65226 ; WX 683 ; N uniFECA ; G 5312
+U 65227 ; WX 683 ; N uniFECB ; G 5313
+U 65228 ; WX 564 ; N uniFECC ; G 5314
+U 65229 ; WX 683 ; N uniFECD ; G 5315
+U 65230 ; WX 683 ; N uniFECE ; G 5316
+U 65231 ; WX 683 ; N uniFECF ; G 5317
+U 65232 ; WX 564 ; N uniFED0 ; G 5318
+U 65233 ; WX 1162 ; N uniFED1 ; G 5319
+U 65234 ; WX 1191 ; N uniFED2 ; G 5320
+U 65235 ; WX 655 ; N uniFED3 ; G 5321
+U 65236 ; WX 720 ; N uniFED4 ; G 5322
+U 65237 ; WX 894 ; N uniFED5 ; G 5323
+U 65238 ; WX 901 ; N uniFED6 ; G 5324
+U 65239 ; WX 655 ; N uniFED7 ; G 5325
+U 65240 ; WX 720 ; N uniFED8 ; G 5326
+U 65241 ; WX 917 ; N uniFED9 ; G 5327
+U 65242 ; WX 931 ; N uniFEDA ; G 5328
+U 65243 ; WX 582 ; N uniFEDB ; G 5329
+U 65244 ; WX 582 ; N uniFEDC ; G 5330
+U 65245 ; WX 868 ; N uniFEDD ; G 5331
+U 65246 ; WX 893 ; N uniFEDE ; G 5332
+U 65247 ; WX 375 ; N uniFEDF ; G 5333
+U 65248 ; WX 408 ; N uniFEE0 ; G 5334
+U 65249 ; WX 733 ; N uniFEE1 ; G 5335
+U 65250 ; WX 784 ; N uniFEE2 ; G 5336
+U 65251 ; WX 619 ; N uniFEE3 ; G 5337
+U 65252 ; WX 670 ; N uniFEE4 ; G 5338
+U 65253 ; WX 854 ; N uniFEE5 ; G 5339
+U 65254 ; WX 900 ; N uniFEE6 ; G 5340
+U 65255 ; WX 375 ; N uniFEE7 ; G 5341
+U 65256 ; WX 408 ; N uniFEE8 ; G 5342
+U 65257 ; WX 590 ; N uniFEE9 ; G 5343
+U 65258 ; WX 606 ; N uniFEEA ; G 5344
+U 65259 ; WX 693 ; N uniFEEB ; G 5345
+U 65260 ; WX 660 ; N uniFEEC ; G 5346
+U 65261 ; WX 622 ; N uniFEED ; G 5347
+U 65262 ; WX 627 ; N uniFEEE ; G 5348
+U 65263 ; WX 917 ; N uniFEEF ; G 5349
+U 65264 ; WX 1012 ; N uniFEF0 ; G 5350
+U 65265 ; WX 917 ; N uniFEF1 ; G 5351
+U 65266 ; WX 1012 ; N uniFEF2 ; G 5352
+U 65267 ; WX 375 ; N uniFEF3 ; G 5353
+U 65268 ; WX 408 ; N uniFEF4 ; G 5354
+U 65269 ; WX 745 ; N uniFEF5 ; G 5355
+U 65270 ; WX 759 ; N uniFEF6 ; G 5356
+U 65271 ; WX 745 ; N uniFEF7 ; G 5357
+U 65272 ; WX 759 ; N uniFEF8 ; G 5358
+U 65273 ; WX 745 ; N uniFEF9 ; G 5359
+U 65274 ; WX 759 ; N uniFEFA ; G 5360
+U 65275 ; WX 745 ; N uniFEFB ; G 5361
+U 65276 ; WX 759 ; N uniFEFC ; G 5362
+U 65279 ; WX 0 ; N uniFEFF ; G 5363
+U 65529 ; WX 0 ; N uniFFF9 ; G 5364
+U 65530 ; WX 0 ; N uniFFFA ; G 5365
+U 65531 ; WX 0 ; N uniFFFB ; G 5366
+U 65532 ; WX 0 ; N uniFFFC ; G 5367
+U 65533 ; WX 1113 ; N uniFFFD ; G 5368
+EndCharMetrics
+StartKernData 
+StartKernPairs 1538
+
+KPX dollar seven -159
+KPX dollar eight -63
+KPX dollar nine -139
+KPX dollar colon -92
+KPX dollar less -196
+KPX dollar Y -73
+KPX dollar backslash -73
+KPX dollar questiondown -73
+KPX dollar Aacute -73
+KPX dollar Hcircumflex -159
+KPX dollar Hbar -159
+KPX dollar Imacron -63
+KPX dollar Ibreve -63
+KPX dollar Iogonek -63
+KPX dollar Idot -63
+KPX dollar IJ -63
+KPX dollar Kcommaaccent -92
+KPX dollar kgreenlandic -196
+KPX dollar Lacute -73
+KPX dollar lacute -196
+KPX dollar uni01DC -159
+KPX dollar uni01F4 -196
+KPX dollar uni01F5 -73
+
+KPX percent nine -83
+KPX percent colon -112
+KPX percent less -112
+KPX percent Kcommaaccent -112
+KPX percent kgreenlandic -112
+KPX percent lacute -112
+KPX percent uni01F4 -112
+
+KPX ampersand six 38
+KPX ampersand Gcircumflex 38
+KPX ampersand Gbreve 38
+KPX ampersand Gdotaccent 38
+KPX ampersand Gcommaaccent 38
+KPX ampersand uni01DA 38
+
+KPX quotesingle less -149
+KPX quotesingle kgreenlandic -149
+KPX quotesingle lacute -149
+KPX quotesingle uni01F4 -149
+
+KPX parenright dollar -235
+KPX parenright D -120
+KPX parenright H -83
+KPX parenright R -83
+KPX parenright U -131
+KPX parenright X -102
+KPX parenright backslash -112
+KPX parenright cent -120
+KPX parenright sterling -120
+KPX parenright currency -120
+KPX parenright yen -120
+KPX parenright brokenbar -120
+KPX parenright section -120
+KPX parenright dieresis -120
+KPX parenright ordfeminine -83
+KPX parenright guillemotleft -83
+KPX parenright logicalnot -83
+KPX parenright sfthyphen -83
+KPX parenright acute -83
+KPX parenright mu -83
+KPX parenright paragraph -83
+KPX parenright periodcentered -83
+KPX parenright cedilla -83
+KPX parenright ordmasculine -83
+KPX parenright guillemotright -102
+KPX parenright onequarter -102
+KPX parenright onehalf -102
+KPX parenright threequarters -102
+KPX parenright questiondown -112
+KPX parenright Aacute -112
+KPX parenright Acircumflex -235
+KPX parenright Atilde -120
+KPX parenright Adieresis -235
+KPX parenright Aring -120
+KPX parenright AE -235
+KPX parenright Ccedilla -120
+KPX parenright Otilde -83
+KPX parenright multiply -83
+KPX parenright Ugrave -83
+KPX parenright Ucircumflex -83
+KPX parenright Yacute -83
+KPX parenright dcaron -83
+KPX parenright dmacron -83
+KPX parenright emacron -83
+KPX parenright ebreve -83
+KPX parenright edotaccent -131
+KPX parenright eogonek -131
+KPX parenright ecaron -131
+KPX parenright imacron -102
+KPX parenright ibreve -102
+KPX parenright iogonek -102
+KPX parenright dotlessi -102
+KPX parenright ij -102
+KPX parenright jcircumflex -102
+KPX parenright Lacute -112
+KPX parenright uni01A5 -120
+KPX parenright uni01AD -83
+KPX parenright Uhorn -83
+KPX parenright uni01F1 -83
+KPX parenright uni01F5 -112
+
+KPX asterisk seven -36
+KPX asterisk less -45
+KPX asterisk Hbar -36
+KPX asterisk lacute -45
+
+KPX period ampersand -92
+KPX period two -92
+KPX period eight -36
+KPX period H -36
+KPX period R -36
+KPX period X -36
+KPX period backslash -131
+KPX period ordfeminine -36
+KPX period guillemotleft -36
+KPX period logicalnot -36
+KPX period sfthyphen -36
+KPX period acute -36
+KPX period mu -36
+KPX period paragraph -36
+KPX period periodcentered -36
+KPX period cedilla -36
+KPX period ordmasculine -36
+KPX period guillemotright -36
+KPX period onequarter -36
+KPX period onehalf -36
+KPX period threequarters -36
+KPX period questiondown -131
+KPX period Aacute -131
+KPX period Egrave -92
+KPX period Icircumflex -92
+KPX period Yacute -36
+KPX period Ebreve -102
+KPX period ebreve -36
+KPX period Idot -36
+KPX period dotlessi -36
+
+KPX slash two -73
+KPX slash seven -339
+KPX slash eight -73
+KPX slash nine -282
+KPX slash colon -159
+KPX slash less -319
+KPX slash backslash -139
+KPX slash questiondown -139
+KPX slash Aacute -139
+KPX slash Ebreve -73
+KPX slash Hbar -339
+KPX slash Idot -73
+KPX slash lacute -319
+
+KPX two dollar -55
+KPX two nine -55
+KPX two semicolon -73
+KPX two less -73
+KPX two lacute -73
+
+KPX three dollar -188
+KPX three D -55
+KPX three V -36
+KPX three backslash 38
+KPX three cent -55
+KPX three sterling -55
+KPX three currency -55
+KPX three yen -55
+KPX three brokenbar -55
+KPX three section -55
+KPX three dieresis -55
+KPX three questiondown 38
+KPX three Aacute 38
+KPX three gdotaccent -36
+KPX three gcommaaccent -36
+
+
+KPX five seven -92
+KPX five less -112
+KPX five backslash -92
+KPX five questiondown -92
+KPX five Aacute -92
+KPX five Hbar -92
+KPX five lacute -112
+
+KPX six six -92
+KPX six Gdotaccent -92
+KPX six Gcommaaccent -92
+
+KPX seven dollar -159
+KPX seven seven 47
+KPX seven D -264
+KPX seven F -272
+KPX seven H -272
+KPX seven R -272
+KPX seven U -225
+KPX seven V -272
+KPX seven X -225
+KPX seven Z -225
+KPX seven backslash -243
+KPX seven cent -164
+KPX seven sterling -264
+KPX seven currency -164
+KPX seven yen -164
+KPX seven brokenbar -164
+KPX seven section -164
+KPX seven dieresis -196
+KPX seven copyright -272
+KPX seven ordfeminine -212
+KPX seven guillemotleft -272
+KPX seven logicalnot -212
+KPX seven sfthyphen -212
+KPX seven acute -192
+KPX seven mu -272
+KPX seven paragraph -192
+KPX seven periodcentered -192
+KPX seven cedilla -192
+KPX seven ordmasculine -159
+KPX seven guillemotright -195
+KPX seven onequarter -225
+KPX seven onehalf -195
+KPX seven threequarters -195
+KPX seven questiondown -243
+KPX seven Aacute -243
+KPX seven Eacute -272
+KPX seven Idieresis -272
+KPX seven Yacute -272
+KPX seven ebreve -159
+KPX seven edotaccent -225
+KPX seven ecaron -225
+KPX seven gdotaccent -272
+KPX seven gcommaaccent -272
+KPX seven dotlessi -225
+
+KPX eight dollar -63
+
+KPX nine dollar -139
+KPX nine two -36
+KPX nine D -112
+KPX nine H -112
+KPX nine L -36
+KPX nine R -112
+KPX nine X -73
+KPX nine cent -112
+KPX nine sterling -112
+KPX nine currency -112
+KPX nine yen -112
+KPX nine brokenbar -112
+KPX nine section -112
+KPX nine dieresis -112
+KPX nine ordfeminine -112
+KPX nine guillemotleft -112
+KPX nine logicalnot -112
+KPX nine sfthyphen -112
+KPX nine acute -112
+KPX nine mu -112
+KPX nine paragraph -112
+KPX nine periodcentered -112
+KPX nine cedilla -112
+KPX nine ordmasculine -112
+KPX nine guillemotright -73
+KPX nine onequarter -73
+KPX nine onehalf -73
+KPX nine threequarters -73
+KPX nine Yacute -112
+KPX nine Ebreve -36
+KPX nine ebreve -112
+KPX nine dotlessi -73
+
+KPX colon dollar -92
+KPX colon D -73
+KPX colon H -73
+KPX colon R -73
+KPX colon U -36
+KPX colon cent -73
+KPX colon sterling -73
+KPX colon currency -73
+KPX colon yen -73
+KPX colon brokenbar -73
+KPX colon section -73
+KPX colon dieresis -73
+KPX colon ordfeminine -73
+KPX colon guillemotleft -73
+KPX colon logicalnot -73
+KPX colon sfthyphen -73
+KPX colon acute -73
+KPX colon mu -73
+KPX colon paragraph -73
+KPX colon periodcentered -73
+KPX colon cedilla -73
+KPX colon ordmasculine -73
+KPX colon Yacute -73
+KPX colon ebreve -73
+KPX colon edotaccent -36
+KPX colon ecaron -36
+
+KPX semicolon ampersand -73
+KPX semicolon two -73
+KPX semicolon H -55
+KPX semicolon ordfeminine -55
+KPX semicolon guillemotleft -55
+KPX semicolon logicalnot -55
+KPX semicolon sfthyphen -55
+KPX semicolon Egrave -73
+KPX semicolon Icircumflex -73
+KPX semicolon Yacute -55
+KPX semicolon Ebreve -73
+
+KPX less dollar -196
+KPX less ampersand -73
+KPX less two -73
+KPX less D -188
+KPX less H -188
+KPX less R -188
+KPX less X -149
+KPX less cent -188
+KPX less sterling -188
+KPX less currency -188
+KPX less yen -188
+KPX less brokenbar -188
+KPX less section -188
+KPX less dieresis -188
+KPX less ordfeminine -188
+KPX less guillemotleft -188
+KPX less logicalnot -188
+KPX less sfthyphen -188
+KPX less acute -188
+KPX less mu -188
+KPX less paragraph -188
+KPX less periodcentered -188
+KPX less cedilla -188
+KPX less ordmasculine -188
+KPX less guillemotright -149
+KPX less onequarter -149
+KPX less onehalf -149
+KPX less threequarters -149
+KPX less Egrave -73
+KPX less Icircumflex -73
+KPX less Yacute -188
+KPX less Ebreve -92
+KPX less ebreve -188
+KPX less dotlessi -149
+
+
+KPX D backslash -63
+KPX D questiondown -63
+KPX D Aacute -63
+
+
+KPX N H -55
+KPX N R -55
+KPX N ordfeminine -55
+KPX N guillemotleft -55
+KPX N logicalnot -55
+KPX N sfthyphen -55
+KPX N acute -55
+KPX N mu -55
+KPX N paragraph -55
+KPX N periodcentered -55
+KPX N cedilla -55
+KPX N ordmasculine -45
+KPX N Yacute -55
+KPX N ebreve -55
+
+
+
+
+
+KPX cent backslash -63
+KPX cent questiondown -63
+KPX cent Aacute -63
+
+KPX sterling backslash -63
+KPX sterling questiondown -63
+KPX sterling Aacute -63
+
+KPX currency backslash -63
+KPX currency questiondown -63
+KPX currency Aacute -63
+
+KPX yen backslash -63
+KPX yen questiondown -63
+KPX yen Aacute -63
+
+KPX brokenbar backslash -63
+KPX brokenbar questiondown -63
+KPX brokenbar Aacute -63
+
+KPX section backslash -63
+KPX section questiondown -63
+KPX section Aacute -63
+
+
+
+KPX Acircumflex seven -159
+KPX Acircumflex eight -63
+KPX Acircumflex nine -139
+KPX Acircumflex colon -92
+KPX Acircumflex less -196
+KPX Acircumflex Y -73
+KPX Acircumflex backslash -73
+KPX Acircumflex questiondown -73
+KPX Acircumflex Aacute -73
+KPX Acircumflex Hcircumflex -159
+KPX Acircumflex Hbar -159
+KPX Acircumflex Imacron -63
+KPX Acircumflex Ibreve -63
+KPX Acircumflex Iogonek -63
+KPX Acircumflex Idot -63
+KPX Acircumflex IJ -63
+KPX Acircumflex Kcommaaccent -92
+KPX Acircumflex kgreenlandic -196
+KPX Acircumflex Lacute -73
+KPX Acircumflex lacute -196
+KPX Acircumflex uni01DC -159
+KPX Acircumflex uni01F4 -196
+KPX Acircumflex uni01F5 -73
+
+KPX Adieresis seven -159
+KPX Adieresis eight -63
+KPX Adieresis nine -139
+KPX Adieresis colon -92
+KPX Adieresis less -196
+KPX Adieresis Y -73
+KPX Adieresis backslash -73
+KPX Adieresis questiondown -73
+KPX Adieresis Aacute -73
+KPX Adieresis Hcircumflex -159
+KPX Adieresis Hbar -159
+KPX Adieresis Imacron -63
+KPX Adieresis Ibreve -63
+KPX Adieresis Iogonek -63
+KPX Adieresis Idot -63
+KPX Adieresis IJ -63
+KPX Adieresis Kcommaaccent -92
+KPX Adieresis kgreenlandic -196
+KPX Adieresis Lacute -73
+KPX Adieresis lacute -196
+KPX Adieresis uni01DC -159
+KPX Adieresis uni01F4 -196
+KPX Adieresis uni01F5 -73
+
+KPX AE seven -159
+KPX AE eight -63
+KPX AE nine -139
+KPX AE colon -92
+KPX AE less -196
+KPX AE Y -73
+KPX AE backslash -73
+KPX AE questiondown -73
+KPX AE Aacute -73
+KPX AE Hcircumflex -159
+KPX AE Hbar -159
+KPX AE Imacron -63
+KPX AE Ibreve -63
+KPX AE Iogonek -63
+KPX AE Idot -63
+KPX AE IJ -63
+KPX AE Kcommaaccent -92
+KPX AE kgreenlandic -196
+KPX AE Lacute -73
+KPX AE lacute -196
+KPX AE uni01DC -159
+KPX AE uni01F4 -196
+KPX AE uni01F5 -73
+
+KPX Egrave six 38
+KPX Egrave Gcircumflex 38
+KPX Egrave Gbreve 38
+KPX Egrave Gdotaccent 38
+KPX Egrave Gcommaaccent 38
+KPX Egrave uni01DA 38
+
+KPX Ecircumflex six 38
+KPX Ecircumflex Gcircumflex 38
+KPX Ecircumflex Gbreve 38
+KPX Ecircumflex Gdotaccent 38
+KPX Ecircumflex Gcommaaccent 38
+KPX Ecircumflex uni01DA 38
+
+KPX Igrave six 38
+KPX Igrave Gcircumflex 38
+KPX Igrave Gbreve 38
+KPX Igrave Gdotaccent 38
+KPX Igrave Gcommaaccent 38
+KPX Igrave uni01DA 38
+
+KPX Icircumflex six 38
+KPX Icircumflex Gcircumflex 38
+KPX Icircumflex Gbreve 38
+KPX Icircumflex Gdotaccent 38
+KPX Icircumflex Gcommaaccent 38
+KPX Icircumflex uni01DA 38
+
+KPX Eth less -149
+KPX Eth kgreenlandic -149
+KPX Eth lacute -149
+KPX Eth uni01F4 -149
+
+KPX Ograve less -149
+KPX Ograve kgreenlandic -149
+KPX Ograve lacute -149
+KPX Ograve uni01F4 -149
+
+KPX agrave seven -36
+KPX agrave less -45
+KPX agrave Hbar -36
+KPX agrave lacute -45
+
+KPX ucircumflex two -73
+KPX ucircumflex seven -339
+KPX ucircumflex eight -73
+KPX ucircumflex nine -282
+KPX ucircumflex colon -159
+KPX ucircumflex less -319
+KPX ucircumflex backslash -139
+KPX ucircumflex questiondown -139
+KPX ucircumflex Aacute -139
+KPX ucircumflex Ebreve -73
+KPX ucircumflex Hbar -339
+KPX ucircumflex Idot -73
+KPX ucircumflex lacute -319
+
+KPX ydieresis two -73
+KPX ydieresis seven -339
+KPX ydieresis eight -73
+KPX ydieresis nine -282
+KPX ydieresis colon -159
+KPX ydieresis less -319
+KPX ydieresis backslash -139
+KPX ydieresis questiondown -139
+KPX ydieresis Aacute -139
+KPX ydieresis Ebreve -73
+KPX ydieresis Hbar -339
+KPX ydieresis Idot -73
+KPX ydieresis lacute -319
+
+KPX Abreve O -246
+
+KPX abreve two -73
+KPX abreve seven -339
+KPX abreve eight -73
+KPX abreve nine -282
+KPX abreve colon -159
+KPX abreve less -319
+KPX abreve backslash -139
+KPX abreve questiondown -139
+KPX abreve Aacute -139
+KPX abreve Ebreve -73
+KPX abreve Hbar -339
+KPX abreve Idot -73
+KPX abreve lacute -319
+
+KPX Edotaccent seven -92
+KPX Edotaccent less -112
+KPX Edotaccent backslash -92
+KPX Edotaccent questiondown -92
+KPX Edotaccent Aacute -92
+KPX Edotaccent Hbar -92
+KPX Edotaccent lacute -112
+
+
+KPX Ecaron seven -92
+KPX Ecaron less -112
+KPX Ecaron backslash -92
+KPX Ecaron questiondown -92
+KPX Ecaron Aacute -92
+KPX Ecaron Hbar -92
+KPX Ecaron lacute -112
+
+
+KPX Gdotaccent six -92
+KPX Gdotaccent Gdotaccent -92
+KPX Gdotaccent Gcommaaccent -92
+
+KPX Gcommaaccent six -92
+KPX Gcommaaccent Gdotaccent -92
+KPX Gcommaaccent Gcommaaccent -92
+
+KPX Hbar dollar -159
+KPX Hbar seven 47
+KPX Hbar D -264
+KPX Hbar F -272
+KPX Hbar H -272
+KPX Hbar R -272
+KPX Hbar U -225
+KPX Hbar V -272
+KPX Hbar X -225
+KPX Hbar Z -225
+KPX Hbar backslash -243
+KPX Hbar cent -264
+KPX Hbar sterling -264
+KPX Hbar currency -264
+KPX Hbar yen -264
+KPX Hbar brokenbar -264
+KPX Hbar section -264
+KPX Hbar dieresis -196
+KPX Hbar copyright -272
+KPX Hbar ordfeminine -272
+KPX Hbar guillemotleft -272
+KPX Hbar logicalnot -272
+KPX Hbar sfthyphen -272
+KPX Hbar acute -272
+KPX Hbar mu -272
+KPX Hbar paragraph -272
+KPX Hbar periodcentered -272
+KPX Hbar cedilla -272
+KPX Hbar ordmasculine -159
+KPX Hbar guillemotright -225
+KPX Hbar onequarter -225
+KPX Hbar onehalf -225
+KPX Hbar threequarters -225
+KPX Hbar questiondown -243
+KPX Hbar Aacute -243
+KPX Hbar Eacute -272
+KPX Hbar Idieresis -272
+KPX Hbar Yacute -272
+KPX Hbar ebreve -159
+KPX Hbar edotaccent -225
+KPX Hbar ecaron -225
+KPX Hbar gdotaccent -272
+KPX Hbar gcommaaccent -272
+KPX Hbar Hbar 47
+KPX Hbar dotlessi -225
+
+KPX Idot dollar -63
+
+KPX lacute dollar -196
+KPX lacute ampersand -73
+KPX lacute two -73
+KPX lacute D -188
+KPX lacute H -188
+KPX lacute R -188
+KPX lacute X -149
+KPX lacute cent -188
+KPX lacute sterling -188
+KPX lacute currency -188
+KPX lacute yen -188
+KPX lacute brokenbar -188
+KPX lacute section -188
+KPX lacute dieresis -188
+KPX lacute ordfeminine -188
+KPX lacute guillemotleft -188
+KPX lacute logicalnot -188
+KPX lacute sfthyphen -188
+KPX lacute acute -188
+KPX lacute mu -188
+KPX lacute paragraph -188
+KPX lacute periodcentered -188
+KPX lacute cedilla -188
+KPX lacute ordmasculine -188
+KPX lacute guillemotright -149
+KPX lacute onequarter -149
+KPX lacute onehalf -149
+KPX lacute threequarters -149
+KPX lacute Egrave -73
+KPX lacute Icircumflex -73
+KPX lacute Yacute -188
+KPX lacute Ebreve -92
+KPX lacute ebreve -188
+KPX lacute dotlessi -149
+
+
+KPX uni027D dollar -235
+KPX uni027D hyphen -92
+KPX uni027D nine 38
+KPX uni027D less 75
+KPX uni027D lacute 75
+EndKernPairs
+EndKernData
+EndFontMetrics
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
