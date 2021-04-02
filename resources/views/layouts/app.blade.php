@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>Grayscale - Start Bootstrap Theme</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="{{ asset('icons/bootstrap-icons.css') }}" rel="stylesheet"/>
+        <link rel="stylesheet" href="{{ asset('vendors/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet"/>
         <link rel="stylesheet" href="{{ asset('vendors/bootstrap/dist/css/bootstrap.css') }}" rel="stylesheet"/>
         <link href="css/styles.css?{{ md5(time()) }}" rel="stylesheet" />
     </head>
