@@ -96,14 +96,14 @@
                                 value="{{ number_format($item['quantity'],2) }}"
                                 onkeyup="this.value=this.value.replace(/[^\d*(\.\d{0,2})?$]/,'')"/>
                             </td>
-                            <td class="text-end"><input type="text" class="form-control form-control-sm"
+                            <td><input type="text" class="form-control form-control-sm text-end"
                                 name="items[{{ $index }}][price_excl]"
                                 wire:model="items.{{ $index }}.price_excl"
-                                value="{{ number_format($item['price_excl'],2) }}"
+                                value="{{ number_format($item['price_excl'],2,'.','') }}"
                                 wire:change="updateItem()"
                                 onkeyup="this.value=this.value.replace(/[^\d*(\.\d{0,2})?$]/,'')"
                                 /></td>
-                            <td class="text-end"><select class="form-select"
+                            <td><select class="form-select"
                                 wire:model="items.{{ $index }}.tax_type"
                                 wire:change="updateItem()"
                                 name="items[{{ $index }}][tax_type]">
@@ -111,7 +111,7 @@
                                 <option value="{{ $i }}">{{ $o }}</option>
                             @endforeach
                             </select></td>
-                            <td class="text-end"><input type="text" class="form-control form-control-sm"
+                            <td><input type="text" class="form-control form-control-sm text-end"
                                 name="items[{{ $index }}][discount_perc]"
                                 wire:model="items.{{ $index }}.discount_perc"
                                 wire:change="updateItem()"
