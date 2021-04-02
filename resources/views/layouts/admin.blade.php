@@ -70,7 +70,7 @@
                   </li>
                 @if(count(array_intersect(session()->get('grant'), ['SU','documents_access']))==1)
                 <li class="nav-item">
-                    <a class="nav-link {{request()->is('documents') ? 'active' : ''}}" href="/documents" data-toggle="tooltip" title="{{ __('global.menu.documents.title') }}">
+                    <a class="nav-link {{(request()->is('documents/*')) || (request()->is('documents')) ? 'active' : ''}}" href="/documents" data-toggle="tooltip" title="{{ __('global.menu.documents.title') }}">
                         <i class="bi bi-file-earmark fa-menu d-none d-sm-block"></i> <span class="d-block d-sm-none">{{ __('global.menu.documents.title') }}</span>
                     </a>
                   </li>

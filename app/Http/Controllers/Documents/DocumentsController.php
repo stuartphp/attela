@@ -35,6 +35,10 @@ class DocumentsController extends Controller
 
         (new PDFDocumentService)->index($id);
     }
+    public function edit($id)
+    {
+        return view('documents.edit2', compact('id'));
+    }
 
     public function view($id)
     {

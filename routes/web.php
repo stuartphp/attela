@@ -35,6 +35,7 @@ Route::group(['middleware' => ['web', 'company','auth']], function () {
         Route::get('view/{id}', [App\Http\Controllers\Documents\DocumentsController::class, 'view']);
         Route::post('flow/{id}', [App\Http\Controllers\Documents\DocumentsController::class, 'flow']);
         Route::get('/', [App\Http\Controllers\Documents\DocumentsController::class, 'index']);
+        Route::get('/{id}/edit', [App\Http\Controllers\Documents\DocumentsController::class, 'edit']);
         Route::resource('all', App\Http\Controllers\Documents\AllController::class);
         Route::resource('credit-notes', App\Http\Controllers\Documents\CreditNotesController::class);
         Route::resource('goods-delivery-notes', App\Http\Controllers\Documents\GoodsDeliveryNotesController::class);

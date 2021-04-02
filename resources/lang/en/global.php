@@ -7,6 +7,7 @@ return [
     'add'                                  => 'Add',
     'add_new_record'                       => 'Add New Record',
     'add_comment'                          => 'Add Comment',
+    'add_item'                              => 'Add Item',
     'all'                                   =>'All',
     'all_companies'                         =>'All companies',
     'allRightsReserved'                    => 'All rights reserved.',
