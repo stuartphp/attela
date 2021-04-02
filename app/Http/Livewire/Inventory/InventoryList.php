@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Inventory;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
@@ -20,12 +20,20 @@ class InventoryList extends Component
         'page' => ['except' => 1],
         'size'
     ];
+    public function mount()
+    {
+        $this->size = (session()->has('pagination')) ? session()->get('pagination') : 15;
+    }
 
     public function render()
     {
         if($this->search>'')
         {
             $this->page=1;
+        }
+        if($this->size > 0)
+        {
+            session()->put('pagination', $this->size);
         }
         $data = DB::table('inventory_items')
         ->where('company_id', session()->get('company_id'))
@@ -36,6 +44,6 @@ class InventoryList extends Component
         ->orderBy('description')
         ->select('id', 'item_code', 'description', 'is_active')
         ->paginate($this->size);
-        return view('livewire.inventory-list', compact('data'));
+        return view('livewire.inventory.inventory-list', compact('data'));
     }
 }

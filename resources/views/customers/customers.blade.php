@@ -74,8 +74,8 @@
 </div>
 
 
-<div id="mySidenav" class="sidenav">   
-    <livewire:customer-list/>
+<div id="mySidenav" class="sidenav">
+    <livewire:customers.customer-list/>
 </div>
 
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Employees;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
@@ -22,7 +22,7 @@ class EmployeeSearch extends Component
     {
         $this->query='';
         $this->result=[];
-        
+
 
     }
     public function updatedQuery()
@@ -45,6 +45,6 @@ class EmployeeSearch extends Component
     public function render()
     {
         $field = $this->field;
-        return view('livewire.employee-search', compact('field'));
+        return view('livewire.employees.employee-search', compact('field'));
     }
 }

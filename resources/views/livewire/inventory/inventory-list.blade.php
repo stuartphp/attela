@@ -3,10 +3,10 @@
         {{ __('inventory_items.title') }}<span style="float:right"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></span>
         <div class="row gx-2 align-ite-s-center">
             <div class="col-sm-2">
-                <input  wire:model="size" type="text" class="form-control form-control-sm"/>
+                <input  wire:model.lazy="size" type="text" class="form-control form-control-sm"/>
             </div>
             <div class="col-sm-10">
-                <input wire:model="search" type="text" class="form-control form-control-sm mb-2" placeholder="{{ __('global.search') }}" aria-label="Search" aria-describedby="basic-addon2">
+                <input wire:model.lazy="search" type="text" class="form-control form-control-sm mb-2" placeholder="{{ __('global.search') }}" aria-label="Search" aria-describedby="basic-addon2">
             </div>
 
         </div>

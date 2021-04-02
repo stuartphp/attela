@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Employees;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
@@ -20,9 +20,17 @@ class EmployeeList extends Component
         'page' => ['except' => 1],
         'size'
     ];
+    public function mount()
+    {
+        $this->size = (session()->has('pagination')) ? session()->get('pagination') : 15;
+    }
 
     public function render()
     {
+        if($this->size > 0)
+        {
+            session()->put('pagination', $this->size);
+        }
         $data = DB::table('employees')
         ->where('company_id', session()->get('company_id'))
         ->where(function($q){
@@ -37,6 +45,6 @@ class EmployeeList extends Component
         ->orderBy('surname')
         ->select('id', 'employee_code', 'surname', 'initials', 'is_active')
         ->paginate($this->size);
-        return view('livewire.employee-list', compact('data'));
+        return view('livewire.employees.employee-list', compact('data'));
     }
 }

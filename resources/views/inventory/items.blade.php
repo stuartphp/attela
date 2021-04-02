@@ -76,7 +76,7 @@
     </div>
 </div>
 <div id="mySidenav" class="sidenav">
-    <livewire:inventory-list/>
+    <livewire:inventory.inventory-list/>
 </div>
 
 @endsection

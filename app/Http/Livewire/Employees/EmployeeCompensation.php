@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Employees;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
@@ -31,6 +31,6 @@ class EmployeeCompensation extends Component
 
     public function render()
     {
-        return view('livewire.employee-compensation', ['comp'=>$this->data]);
+        return view('livewire.employees.employee-compensation', ['comp'=>$this->data]);
     }
 }
