@@ -212,14 +212,13 @@
     <script src="{{asset('vendors/select2/dist/js/select2.full.min.js')}}"></script>
     <script src="{{asset('vendors/sweetalert2/dist/sweetalert2.all.min.js')}}"></script>
 
-
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
     {{--<script src="{{ asset('js/app.js') }}"></script>--}}
     <script src="{{asset('vendors/moment.min.js')}}"></script>
     <script src="{{asset('vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js')}}"></script>
     <script src="{{ asset('js/accounting.min.js') }}"></script>
-    @livewireScripts
     <script src="{{ asset('js/main.js') }}"></script>
-
+    @livewireScripts
 <script>
 
 $('.nav-item').on('click', function () {
