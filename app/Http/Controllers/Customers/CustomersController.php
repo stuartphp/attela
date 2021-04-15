@@ -77,12 +77,13 @@ class CustomersController extends Controller
         }
 
         public function update($id){
+            //dd(request()->all());
             $error = Validator::make(\request()->all(), $this->validateRules());
             if($error->fails())
             {
                 return response()->json(['error'=>$error->errors()->all()]);
             }else{
-                $res = request()->all();
+                $form_data = request()->all();
                 $data = Customer::findOrFail($id);
                 $form_data['is_open_item']=request()->get('is_open_item')?1:0;
                 $form_data['accept_electronic_document']=request()->get('accept_electronic_document')?1:0;

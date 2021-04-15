@@ -90,22 +90,29 @@ class DocumentEdit extends Component
     {
         if(strlen($this->searchItem)>1)
         {
-            return $this->searchItemResult = InventoryItem::join('inventory_prices', 'inventory_prices.inventory_item_id', '=', 'inventory_items.id')
-            ->where('company_id', session()->get('company_id'))
-            ->where('inventory_prices.store_id', $this->store)
-            ->where(function($q){
-                $q->where('description', 'like', '%'.$this->searchItem.'%')
-                    ->orWhere('item_code', 'like', '%'.$this->searchItem.'%')
-                    ->orWhere('barcode', 'like', '%'.$this->searchItem.'%')
-                    ->orWhere('dictation', 'like', '%'.$this->searchItem.'%')
-                    ->orWhere('keywords', 'like', '%'.$this->searchItem.'%')
-                    ->orWhere('tags', 'like', '%'.$this->searchItem.'%');
-            })
-            ->where('is_active', 1)
-            ->orderBy('description')
-            ->limit(10)
-            ->get()
-            ->toArray();
+            // return $this->searchItemResult = InventoryItem::join('inventory_prices', 'inventory_prices.inventory_item_id', '=', 'inventory_items.id')
+            // ->where('company_id', session()->get('company_id'))
+            // ->where('inventory_prices.store_id', $this->store)
+            // ->where(function($q){
+            //     $q->where('description', 'like', '%'.$this->searchItem.'%')
+            //         ->orWhere('item_code', 'like', '%'.$this->searchItem.'%')
+            //         ->orWhere('barcode', 'like', '%'.$this->searchItem.'%')
+            //         ->orWhere('dictation', 'like', '%'.$this->searchItem.'%')
+            //         ->orWhere('keywords', 'like', '%'.$this->searchItem.'%')
+            //         ->orWhere('tags', 'like', '%'.$this->searchItem.'%');
+            // })
+            // ->where('is_active', 1)
+            // ->orderBy('description')
+            // ->limit(10)
+            // ->get()
+            // ->toArray();
+            $item_list=[];
+            $items = DB::select("SELECT inventory_items.id, inventory_items.description FROM `inventory_items` inner join inventory_prices on inventory_item_id= inventory_items.id where company_id=".session()->get('company_id')." and inventory_prices.store_id=".$this->store." and (description LIKE '%".$this->searchItem."%' OR item_code LIKE '%".$this->searchItem."%' OR barcode LIKE '%".$this->searchItem."%' OR dictation LIKE '%".$this->searchItem."%' OR keywords LIKE '%".$this->searchItem."%' OR tags LIKE '%".$this->searchItem."%')");
+            foreach($items as $item)
+            {
+                $item_list[$item->id]=$item->description;
+            }
+            return $this->searchItemResult =$item_list;
         }
 
     }
@@ -133,29 +140,29 @@ class DocumentEdit extends Component
 
         if($add_line==true)
         {
-            
-            $item = InventoryItem::with(['prices'=>function($q){
-                $q->where('store_id', $this->store);
-            }])
 
-                ->find($id);
+            // $item = InventoryItem::with(['prices'=>function($q){
+            //     $q->where('store_id', $this->store);
+            // }])
 
+                // ->find($id);
+            $item = DB::select("SELECT inventory_items.*, inventory_prices.cost_price, inventory_prices.".$this->entity['price_list']." as price FROM `inventory_items` inner join inventory_prices on inventory_item_id= inventory_items.id where inventory_items.id=$id and inventory_prices.store_id=".$this->store."");
+                //dd($item);
 
-            dd($item);
             $arr = [
                 'store_id'=>$this->store,
                 'item_id'=>$id,
-                'item_code'=>$item->item_code,
-                'item_description'=>$item->description,
+                'item_code'=>$item[0]->item_code,
+                'item_description'=>$item[0]->description,
                 'project'=>'',
-                'unit'=>$item->unit,
+                'unit'=>$item[0]->unit,
                 'quantity'=>1,
                 'options'=>'',
-                'unit_price'=>$item->prices->cost_price,
-                'tax_type'=>$item->sales_tax_type ,
-                'price_excl'=>$item->prices->retail,
+                'unit_price'=>$item[0]->cost_price,
+                'tax_type'=>$item[0]->sales_tax_type ,
+                'price_excl'=>$item[0]->price,
                 'discount_perc'=>NULL,
-                'is_service'=>$item->is_service,
+                'is_service'=>$item[0]->is_service,
             ];
             array_push($this->items, $arr);
         }

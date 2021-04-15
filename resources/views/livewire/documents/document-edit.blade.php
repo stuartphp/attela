@@ -157,8 +157,8 @@
                                 @click="open = true"
                             />
                             <div x-show="open" style="position: absolute; z-index:1000; width:100%" @away class="list-group">
-                                    @foreach ($searchItemResult as $result)
-                                    <button type="button" @click="open=false" wire:click="addItem({{ $result['id'] }})" class="list-group-item list-group-item-action list-group-item-info">{{ $result['description'] }}</button>
+                                    @foreach ($searchItemResult as $k=>$v)
+                                    <button type="button" @click="open=false" wire:click="addItem({{ $k }})" class="list-group-item list-group-item-action list-group-item-info">{{ $v }}</button>
                                 @endforeach
                             </div>
                         </div>
