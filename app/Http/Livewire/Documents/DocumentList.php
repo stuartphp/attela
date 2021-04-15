@@ -73,6 +73,7 @@ class DocumentList extends Component
 
     public function doAction($id, $action)
     {
+        dd($action);
         return redirect('/documents/documents/'.$id.'/edit');
     }
 }

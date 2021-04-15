@@ -4,7 +4,6 @@
 <div id="mySidenav" class="sidenav">
     <div class="head mb-1 ms-2 me-2">
         {{ __('documents.title') }}<span style="float:right"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></span>
-
     </div>
 
     <div class="list-group ms-3 me-3">

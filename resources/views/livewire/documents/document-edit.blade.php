@@ -87,7 +87,7 @@
                             <input type="hidden" name="items[{{ $index }}][item_id]" wire:model="items.{{ $index }}.item_id" value="{{ $item['item_id'] }}"/>
                             <input type="hidden" name="items[{{ $index }}][store_id]" wire:model="items.{{ $index }}.store_id" value="{{ $item['store_id'] }}"/>
                             <input type="hidden" name="items[{{ $index }}][unit_price]" wire:model="items.{{ $index }}.unit_price" value="{{ $item['unit_price'] }}"/>
-                            <input type="hidden" name="items[{{ $index }}][unit_price]" wire:model="items.{{ $index }}.unit_price" value="{{ $item['unit_price'] }}"/>
+                            <input type="hidden" name="items[{{ $index }}][is_service]" wire:model="items.{{ $index }}.is_service" value="{{ $item['is_service'] }}"/>
                             <td><input type="text" class="form-control form-control-sm"
                                 name="items[{{ $index }}][item_code]"
                                 wire:model="items.{{ $index }}.item_code"

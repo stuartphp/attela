@@ -132,7 +132,7 @@ class DocumentEdit extends Component
         {
             if($this->items[$i]['item_id']==$id)
             {
-                $add_line=false;
+                $add_line=false; 
                 $qty = $this->items[$i]['quantity'];
                 $this->items[$i]['quantity']=$qty+1;
             }
