@@ -1,4 +1,7 @@
 <div>
+    <form action="/documents/documents/{{ $doc_id }}" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_method" value="PUT"/>
+        @csrf
     <div class="card mt-2" style="background-color: {{ $color }}">
         <div class="card-header">
             <div class="row">
@@ -11,44 +14,55 @@
             <div class="row">
                 <div class="col-4">
                     <b>Billed To:</b>
+                    <input type="hidden" name="physical_address" value="{{ $physical_address }}"/>
                     @if ($editAddressField === 'physical_address')
-                        <textarea class="form-control" x-on:click.away=="editAddressField=''" >{{ ($document['physical_address']) }}</textarea>
+                        <div class="row">
+                            <div class="col-10"><textarea class="form-control form-control-sm"
+                            wire:model.lazy="physical_address" >{{ $physical_address }}</textarea></div>
+                            <div class="col-2"><button class="btn btn-outline-primary btn-xs" wire:click='saveAddress()'>{{ __('global.update') }}</button></div>
+                        </div>
                     @else
-                    <div style="cursor: pointer" wire:click="editAddress('physical_address')">{!! nl2br($document['physical_address']) !!}</div>
+                        <div style="cursor: pointer" wire:click.prevent="editAddress('physical_address')">{!! nl2br($physical_address) !!}</div>
                     @endif
                 </div>
                 <div class="col-4">
                     <b>Deliver To:</b>
+                    <input type="hidden" name="delivery_address" value="{{ $delivery_address }}"/>
                     @if ($editAddressField === 'delivery_address')
-                        <textarea class="form-control" x-on:click.away=="editAddressField=''" >{{ ($document['delivery_address']) }}</textarea>
+                        <div class="row">
+                            <div class="col-10"><textarea class="form-control form-control-sm"
+                                name="delivery_address"
+                            wire:model.lazy="delivery_address" >{{ $delivery_address }}</textarea></div>
+                            <div class="col-2"><button class="btn btn-outline-primary btn-xs" wire:click.prevent='saveAddress()'>{{ __('global.update') }}</button></div>
+                        </div>
                     @else
-                    <div style="cursor: pointer" wire:click="editAddress('delivery_address')">{!! nl2br($document['delivery_address']) !!}</div>
+                    <div style="cursor: pointer" wire:click="editAddress('delivery_address')">{!! nl2br($delivery_address) !!}</div>
                     @endif
                 </div>
                 <div class="col-2">
                     <div class="fx-1"><strong>Detail:</strong></div>
                     <div class="row">
-                        <div class="col-7">Date</div>
-                        <div class="col-5 mt-1"><strong>{{ $document['action_date'] }}</strong></div>
-                        <div class="col-7 mt-1">Delivery Date</div>
-                        <div class="col-5 mt-1"><strong>{{ $document['expire_delivery'] }}</strong></div>
-                        <div class="col-7 mt-1">Reference</div>
-                        <div class="col-5 mt-1"><strong>{{ $document['reference_number'] }}</strong></div>
-                        <div class="col-7 mt-1">Sales Code</div>
-                        <div class="col-5 mt-1"><strong>{{ $document['sales_code'] }}</strong></div>
+                        <div class="col-6">Date</div>
+                        <div class="col-6 mt-1"><strong>{{ $document['action_date'] }}</strong></div>
+                        <div class="col-6 mt-1">Delivery Date</div>
+                        <div class="col-6 mt-1"><input type="text" name="expire_delivery" class="form-control form-control-sm date" value="{{ $document['expire_delivery'] }}"/></div>
+                        <div class="col-6 mt-1">Reference</div>
+                        <div class="col-6 mt-1"><strong>{{ $document['reference_number'] }}</strong></div>
+                        <div class="col-6 mt-1">Sales Code</div>
+                        <div class="col-6 mt-1"><strong>{{ $document['sales_code'] }}</strong></div>
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="fx-1"><strong>Account:</strong></div>
                     <div class="row">
-                        <div class="col-7 mt-1">Terms</div>
-                        <div class="col-5 mt-1"><strong>{{ __('accounting_lookup.payment_terms.'.$document['terms']) }}</strong></div>
-                        <div class="col-7 mt-1">Credit Limit</div>
-                        <div class="col-5 mt-1"><strong>{{ $credit_limit }}</strong></div>
-                        <div class="col-7 mt-1">Balance</div>
-                        <div class="col-5 mt-1"><strong>{{ $balance }}</strong></div>
-                        <div class="col-7 mt-1">Available</div>
-                        <div class="col-5 mt-1"><strong>{{ $available }}</strong></div>
+                        <div class="col-6 mt-1">Terms</div>
+                        <div class="col-6 mt-1"><strong>{{ __('accounting_lookup.payment_terms.'.$document['terms']) }}</strong></div>
+                        <div class="col-6 mt-1">Credit Limit</div>
+                        <div class="col-6 mt-1"><strong>{{ $credit_limit }}</strong></div>
+                        <div class="col-6 mt-1">Balance</div>
+                        <div class="col-6 mt-1"><strong>{{ $balance }}</strong></div>
+                        <div class="col-6 mt-1">Available</div>
+                        <div class="col-6 mt-1"><strong>{{ $available }}</strong></div>
                     </div>
                 </div>
             </div>
@@ -70,6 +84,10 @@
                     <tbody>
                         @foreach ($items as $index => $item )
                         <tr id="row_{{ $index }}">
+                            <input type="hidden" name="items[{{ $index }}][item_id]" wire:model="items.{{ $index }}.item_id" value="{{ $item['item_id'] }}"/>
+                            <input type="hidden" name="items[{{ $index }}][store_id]" wire:model="items.{{ $index }}.store_id" value="{{ $item['store_id'] }}"/>
+                            <input type="hidden" name="items[{{ $index }}][unit_price]" wire:model="items.{{ $index }}.unit_price" value="{{ $item['unit_price'] }}"/>
+                            <input type="hidden" name="items[{{ $index }}][unit_price]" wire:model="items.{{ $index }}.unit_price" value="{{ $item['unit_price'] }}"/>
                             <td><input type="text" class="form-control form-control-sm"
                                 name="items[{{ $index }}][item_code]"
                                 wire:model="items.{{ $index }}.item_code"
@@ -99,7 +117,7 @@
                             <td><input type="text" class="form-control form-control-sm text-end"
                                 name="items[{{ $index }}][price_excl]"
                                 wire:model="items.{{ $index }}.price_excl"
-                                value="{{ number_format($item['price_excl'],2,'.','') }}"
+                                value="{{ number_format($item['price_excl'],2) }}"
                                 wire:change="updateItem()"
                                 onkeyup="this.value=this.value.replace(/[^\d*(\.\d{0,2})?$]/,'')"
                                 /></td>

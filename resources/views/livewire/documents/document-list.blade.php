@@ -2,7 +2,8 @@
     <div class="card">
         <div class="card-header">
             <div class="row">
-                <div class="col-9">Documents</div>
+                <div class="col-9"><a href="#" onclick="openNav()"><i class="bi bi-list"></i></a>
+                    <span id="document_title" class="ms-3">{{ __('global.all') }} {{ __('documents.title') }}</span></div>
                 <div class="col-3">
                     <div class="row">
                         <div class="col-sm-1">

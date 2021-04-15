@@ -38,7 +38,7 @@ class AllController extends Controller
             //->toSql()
             ->paginate(15);
         }
-        return view('documents.all', compact('data', 'keyword'));
+        return view('documents.alls', compact('data', 'keyword'));
 
     }
 

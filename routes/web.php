@@ -29,24 +29,24 @@ Route::get('user-profile', [App\Http\Controllers\DashboardController::class, 'pr
 Route::group(['middleware' => ['web', 'company','auth']], function () {
 
     Route::group(['prefix' => 'documents'], function () {
+        Route::resource('/documents', App\Http\Controllers\Documents\DocumentsController::class);
         Route::get('convert-invoice/{id}', [App\Http\Controllers\Documents\DocumentsController::class, 'convert_invoice']);
         Route::get('lock/{id}', [App\Http\Controllers\Documents\DocumentsController::class, 'lock']);
         Route::get('print/{id}', [App\Http\Controllers\Documents\DocumentsController::class, 'print']);
         Route::get('view/{id}', [App\Http\Controllers\Documents\DocumentsController::class, 'view']);
         Route::post('flow/{id}', [App\Http\Controllers\Documents\DocumentsController::class, 'flow']);
-        Route::get('/', [App\Http\Controllers\Documents\DocumentsController::class, 'index']);
-        Route::get('/{id}/edit', [App\Http\Controllers\Documents\DocumentsController::class, 'edit']);
-        Route::resource('all', App\Http\Controllers\Documents\AllController::class);
-        Route::resource('credit-notes', App\Http\Controllers\Documents\CreditNotesController::class);
-        Route::resource('goods-delivery-notes', App\Http\Controllers\Documents\GoodsDeliveryNotesController::class);
-        Route::resource('tax-invoices', App\Http\Controllers\Documents\TaxInvoicesController::class);
-        Route::resource('quotations', App\Http\Controllers\Documents\QuotationsController::class);
-        Route::resource('sales-orders', App\Http\Controllers\Documents\SalesOrdersController::class);
-        Route::resource('receipts', App\Http\Controllers\Documents\ReceiptsController::class);
-        Route::resource('supplier-invoices', App\Http\Controllers\Documents\SupplierInvoicesController::class);
-        Route::resource('purchase-orders', App\Http\Controllers\Documents\PurchaseOrdersController::class);
-        Route::resource('debit-notes', App\Http\Controllers\Documents\DebitNotesController::class);
-        Route::resource('goods-received-notes', App\Http\Controllers\Documents\GoodsRecievedNotesController::class);
+        // Route::get('/{id}/edit', [App\Http\Controllers\Documents\DocumentsController::class, 'edit']);
+        // Route::resource('all', App\Http\Controllers\Documents\AllController::class);
+        // Route::resource('credit-notes', App\Http\Controllers\Documents\CreditNotesController::class);
+        // Route::resource('goods-delivery-notes', App\Http\Controllers\Documents\GoodsDeliveryNotesController::class);
+        // Route::resource('tax-invoices', App\Http\Controllers\Documents\TaxInvoicesController::class);
+        // Route::resource('quotations', App\Http\Controllers\Documents\QuotationsController::class);
+        // Route::resource('sales-orders', App\Http\Controllers\Documents\SalesOrdersController::class);
+        // Route::resource('receipts', App\Http\Controllers\Documents\ReceiptsController::class);
+        // Route::resource('supplier-invoices', App\Http\Controllers\Documents\SupplierInvoicesController::class);
+        // Route::resource('purchase-orders', App\Http\Controllers\Documents\PurchaseOrdersController::class);
+        // Route::resource('debit-notes', App\Http\Controllers\Documents\DebitNotesController::class);
+        // Route::resource('goods-received-notes', App\Http\Controllers\Documents\GoodsRecievedNotesController::class);
     });
     Route::group(['prefix' => 'help'], function () {
         Route::get('inventory', [App\Http\Controllers\Help\InventoryController::class, 'index'])->name('help_inventory');

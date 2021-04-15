@@ -3,7 +3,7 @@
 <div class="card shadow mb-4">
     <div class="card-header">
         <div class="row">
-            <div class="col-md-6"><a href="{{ url('documents/all') }}">{{ __('global.all') }} ({{ $data->total() }})</a></div>
+            <div class="col-md-6"><a href="{{ url('documents/all') }}">xxx{{ __('global.all') }} ({{ $data->total() }})</a></div>
              <div class="col-md-6 text-end">
                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="{{ url('/documents/all') }}" method="get">
                     <div class="input-group">

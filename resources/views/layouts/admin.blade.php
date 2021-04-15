@@ -23,7 +23,7 @@
 <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container-fluid">
-          <a class="navbar-brand text-success" href="/home">Attela <sup><i>&copy;bms</i></sup></a>
+          <a class="navbar-brand text-success" href="/home">Attela <sup><i>erp</i></sup></a>
         @if(session()->get('company_id'))
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-menu-up"></i>
@@ -70,7 +70,7 @@
                   </li>
                 @if(count(array_intersect(session()->get('grant'), ['SU','documents_access']))==1)
                 <li class="nav-item">
-                    <a class="nav-link {{(request()->is('documents/*')) || (request()->is('documents')) ? 'active' : ''}}" href="/documents" data-toggle="tooltip" title="{{ __('global.menu.documents.title') }}">
+                    <a class="nav-link {{(request()->is('documents/*')) || (request()->is('documents')) ? 'active' : ''}}" href="/documents/documents" data-toggle="tooltip" title="{{ __('global.menu.documents.title') }}">
                         <i class="bi bi-file-earmark fa-menu d-none d-sm-block"></i> <span class="d-block d-sm-none">{{ __('global.menu.documents.title') }}</span>
                     </a>
                   </li>

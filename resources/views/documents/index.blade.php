@@ -27,7 +27,6 @@
 
 </div>
 <div>
-
     <livewire:documents.document-list/>
 </div>
 

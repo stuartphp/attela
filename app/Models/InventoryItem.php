@@ -66,8 +66,9 @@ class InventoryItem extends Model
 
         public function prices()
         {
-            return $this->hasOne(InventoryPrice::class, 'inventory_item_id', 'id');
+            return $this->hasMany(InventoryPrice::class, 'inventory_item_id', 'id');
         }
+
         public function image()
         {
             return $this->hasMany(InventoryImage::class, 'inventory_item_id', 'id');

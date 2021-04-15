@@ -21,6 +21,8 @@ class DocumentEdit extends Component
     public $searchItemResult =[];
     public $editAddress;
     public $editAddressField;
+    public $physical_address;
+    public $delivery_address;
     public $stores=[];
     public $store;
     public $document=[];
@@ -56,6 +58,8 @@ class DocumentEdit extends Component
         $this->credit_limit = $this->entity['credit_limit'];
         $this->balance = $this->entity['current_balance'];
         $this->available = ($this->credit_limit-$this->balance);
+        $this->physical_address = $this->document['physical_address'];
+        $this->delivery_address = $this->document['delivery_address'];
         $this->items = DocumentItem::where('document_id', $this->doc_id)->get()->toArray();
         $this->stores = Store::where('company_id', session()->get('company_id'))->pluck('name', 'id')->toArray();
         $this->store = array_key_first($this->stores);
@@ -110,6 +114,11 @@ class DocumentEdit extends Component
     {
         $this->editAddressField=$field;
     }
+
+    public function saveAddress()
+    {
+        $this->editAddressField='';
+    }
     public function addItem($id){
         $add_line=true;
         for($i=0; $i<count($this->items); $i++)
@@ -124,9 +133,17 @@ class DocumentEdit extends Component
 
         if($add_line==true)
         {
-            $item = InventoryItem::with(['prices'])->findOrFail($id);
+            
+            $item = InventoryItem::with(['prices'=>function($q){
+                $q->where('store_id', $this->store);
+            }])
+
+                ->find($id);
+
+
+            dd($item);
             $arr = [
-                'store_id'=>1,
+                'store_id'=>$this->store,
                 'item_id'=>$id,
                 'item_code'=>$item->item_code,
                 'item_description'=>$item->description,
@@ -138,7 +155,7 @@ class DocumentEdit extends Component
                 'tax_type'=>$item->sales_tax_type ,
                 'price_excl'=>$item->prices->retail,
                 'discount_perc'=>NULL,
-                'is_service'=>0,
+                'is_service'=>$item->is_service,
             ];
             array_push($this->items, $arr);
         }
@@ -234,7 +251,7 @@ class DocumentEdit extends Component
 
     public function vatCalc($tax_type, $value)
     {
-        $tax_rate = 0.15;
+        $tax_rate = __('accounting_lookup.vat.reverse');
         switch($tax_type)
         {
             case '00':
