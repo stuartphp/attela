@@ -10,7 +10,11 @@
 
     <nav class="navbar navbar-expand-lg navbar-light" id="items_nav"  style="background-color: #EDF1ED">
         <div class="container-fluid">
-            <div class="navbar-brand"><span style="cursor:pointer" onclick="openNav()">&#9776;</span> ({{ $data->item_code }}) {{ $data->description }}</div>
+            <div class="row">
+                <div class="col-1"><a href="#" onclick="openNav()"><i class="bi bi-list"></i></a></div>
+                <div class="col-10 navbar-brand"> ({{ $data->item_code }}) {{ $data->description }}</div>
+            </div>
+
         <ul class="nav nav-pills" id="detailTab">
         <li class="nav-item">
           <a class="nav-link active" id="detail-tab" data-bs-toggle="tab" href="#detail" role="tab" aria-controls="detail" aria-selected="true">Details</a>
@@ -42,7 +46,8 @@
         </div>
 
         <div class="tab-pane fade" id="prices" role="tabpanel" aria-labelledby="prices-tab">
-            @include('inventory.form_prices', [$prices, $stores])
+            {{-- @include('inventory.form_prices', [$prices, $stores]) --}}
+            @livewire('inventory.price', ['id'=>$data->id])
         </div>
         <div class="tab-pane fade" id="options" role="tabpanel" aria-labelledby="options-tab">
             @include('inventory.form_options', $options)

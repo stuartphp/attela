@@ -1,8 +1,7 @@
 <?php
 
-use App\Models\InventoryItem;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\DB;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -168,9 +167,8 @@ Route::group(['middleware' => ['web', 'company','auth']], function () {
 
 Route::get('pdf/samples', [\App\Http\Controllers\PDF\SamplesController::class, 'index']);
 Route::get('sales', function(){
-    $data = InventoryItem::paginate(15);
-    //dd($data);
-    return view('sales', compact('data'));
+    $stores = DB::table('stores')->where('company_id', session()->get('company_id'))->orderBy('name')->pluck('name', 'id')->toArray();
+    return view('sales', compact('stores'));
 });
 Route::get('crud', [App\Http\Controllers\CrudController::class, 'index']);
 Route::get('crud/table/{tbl}', [App\Http\Controllers\CrudController::class, 'table']);

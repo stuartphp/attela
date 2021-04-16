@@ -7,7 +7,7 @@
 
 <div id="loadImg"><img src="/images/ajax-loader.gif" width="100px"/></div>
 <div id="result" class="content-panel" style="background-color: #ffffff">
-    <span style="font-size:1.25rem; cursor:pointer" onclick="openNav()">&#9776;</span>
+    <a href="#" onclick="openNav()"><i class="bi bi-list"></i></a>
     <!-- Display Dashboard stuff-->
     <div class="row ms-2 mt-2">
         <div class="card me-3 mb-2" style="width: 18rem;">
