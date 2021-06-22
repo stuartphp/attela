@@ -13,6 +13,7 @@ class InventoryList extends Component
     public $search = '';
     public $page = 1;
     public $size=15;
+    public $item_id=null;
 
     protected $paginationTheme = 'bootstrap';
     protected $queryString = [
@@ -27,10 +28,6 @@ class InventoryList extends Component
 
     public function render()
     {
-        if($this->search>'')
-        {
-            $this->page=1;
-        }
         if($this->size > 0)
         {
             session()->put('pagination', $this->size);

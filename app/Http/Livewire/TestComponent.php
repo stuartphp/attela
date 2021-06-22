@@ -30,6 +30,10 @@ class TestComponent extends Component
     }
     public function render()
     {
+        if(empty($this->size))
+        {
+            $this->size=15;
+        }
         if(!empty($this->search))
         {
             $prices = DB::table('inventory_prices')

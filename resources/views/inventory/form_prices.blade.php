@@ -1,4 +1,5 @@
-<div class="form-heading mt-2 ms-2">Prices<span style="float: right"><a href="#" onclick="$('#form_price').toggle()"><i class="bi bi-plus" id="inv_price_add_close"></i></a></span></div>
+
+
 <form method="post" id="form_price" enctype="multipart/form-data">
     @csrf
     <input type="hidden" id="price_action" value="add"/>
@@ -79,58 +80,8 @@
         </div>
     </div>
 </form>
-<div class="row justify-content-start" id="priceTable">
-    <div class="col-1 mt-1">
-        <div class="list-group text-end group-title">
-            <div class="list-group-item fw-bold">{{__('inventory_prices.fields.store_id')}}</div>
-            <div class="list-group-item fw-bold">{{__('inventory_prices.fields.cost_price')}}</div>
-            <div class="list-group-item fw-bold">{{__('inventory_prices.fields.retail')}}</div>
-            <div class="list-group-item fw-bold">{{__('inventory_prices.fields.dealer')}}</div>
-            <div class="list-group-item fw-bold">{{__('inventory_prices.fields.whole_sale')}}</div>
-            <div class="list-group-item fw-bold">{{__('inventory_prices.fields.price_list1')}}</div>
-            <div class="list-group-item fw-bold">{{__('inventory_prices.fields.price_list2')}}</div>
-            <div class="list-group-item fw-bold">{{__('inventory_prices.fields.price_list3')}}</div>
-            <div class="list-group-item fw-bold">{{__('inventory_prices.fields.price_list4')}}</div>
-            <div class="list-group-item fw-bold">{{__('inventory_prices.fields.price_list5')}}</div>
-            <div class="list-group-item fw-bold">{{__('inventory_prices.fields.special')}}</div>
-            <div class="list-group-item fw-bold">{{__('inventory_prices.fields.special_from')}}</div>
-            <div class="list-group-item fw-bold">{{__('inventory_prices.fields.special_to')}}</div>
-            <div class="list-group-item fw-bold pt-3 pb-2">{{ __('global.action') }}</div>
-        </div>
-    </div>
-    <div class="col-11">
-        <div class="flow-container flex">
-            @foreach ($prices as $item)
-            <div class="item flex-item">
-                <div class="list-group">
-                    <div class="list-group-item text-center"><b>{{($item->store->name)??'-'}}</b></div>
-                    <div class="list-group-item text-end">{{(number_format($item->cost_price,2))??'-'}}</div>
-                    <div class="list-group-item text-end">{{(number_format($item->retail,2))??'-'}}</div>
-                    <div class="list-group-item text-end">{{(number_format($item->dealer,2))??'-'}}</div>
-                    <div class="list-group-item text-end">{{(number_format($item->whole_sale,2))??'-'}}</div>
-                    <div class="list-group-item text-end">{{(number_format($item->price_list1,2))??'-'}}</div>
-                    <div class="list-group-item text-end">{{(number_format($item->price_list2,2))??'-'}}</div>
-                    <div class="list-group-item text-end">{{(number_format($item->price_list3,2))??'-'}}</div>
-                    <div class="list-group-item text-end">{{(number_format($item->price_list4,2))??'-'}}</div>
-                    <div class="list-group-item text-end">{{(number_format($item->price_list5,2))??'-'}}</div>
-                    <div class="list-group-item text-end">{{(number_format($item->special,2))??'-'}}</div>
-                    <div class="list-group-item text-center">{{($item->special_from)??'-'}}</div>
-                    <div class="list-group-item text-center">{{($item->special_to)??'-'}}</div>
-                    <div class="list-group-item"><select class="inv_price_action form-select" id="pri_{{ $item->inventory_item_id }}_{{ $item->id }}">
-                        <option value="">{{ __('global.select') }}</option>
-                        <option value="Copy">{{ __('global.copy') }}</option>
-                        <option value="Edit">{{ __('global.edit') }}</option>
-                        <option value="Delete">{{ __('global.delete') }}</option>
-                        </select></div>
-                </div>
-            </div>
-            @endforeach
-  </div>
-    </div>
-</div>
 
 <script>
-
     $(function(){
         $('#form_price').hide();
         $('.datetime').datetimepicker({
@@ -170,11 +121,12 @@
                 success: function(response)
                 {
                     if(response.success){
-                        $("#pri_r_"+id).remove();
-                        $('#priceTable tbody').append(response.success);
-                        document.getElementById("form_price").reset();
-                        $('#inv_pri_header').html(add);
-                        $('#price_action').val('Add');
+                        // $("#pri_r_"+id).remove();
+                        // $('#priceTable tbody').append(response.success);
+                        // document.getElementById("form_price").reset();
+                        // $('#inv_pri_header').html(add);
+                        // $('#price_action').val('Add');
+                        $('#reloadIt').trigger('click');
                         $('#inv_price_add_close').trigger('click');
                         $('#form_price').toggle();
                         notice('success', '{{__("global.record_updated")}}');
@@ -200,12 +152,12 @@
                 dataType: 'JSON',
                 success: function (response) {
                     if(response.success){
-                        $('#priceTable tbody').append(response.success);
-                        document.getElementById("form_price").reset();
-                        $('#inv_pri_header').html(add);
-                        $('#price_action').val('Add');
-                        $('#inv_price_add_close').trigger('click');
-                        $('#form_price').toggle();
+                        // $('#priceTable tbody').append(response.success);
+                        // document.getElementById("form_price").reset();
+                        // $('#inv_pri_header').html(add);
+                        // $('#price_action').val('Add');
+                        // $('#inv_price_add_close').trigger('click');
+                        // $('#form_price').toggle();
                         notice('success', '{{trans('global.record_added')}}');
                     }else{
                         let err='<ul class="text-left">';
@@ -288,3 +240,4 @@
         $('#'+id).val('');
     });
 </script>
+

@@ -46,8 +46,9 @@
         </div>
 
         <div class="tab-pane fade" id="prices" role="tabpanel" aria-labelledby="prices-tab">
-            {{-- @include('inventory.form_prices', [$prices, $stores]) --}}
-            @livewire('inventory.price', ['id'=>$data->id])
+            @include('inventory.form_prices', ['id'=>$data->id])
+            {{-- @livewire('inventory.inventory-price', ['item_id'=>$data->id]) --}}
+
         </div>
         <div class="tab-pane fade" id="options" role="tabpanel" aria-labelledby="options-tab">
             @include('inventory.form_options', $options)

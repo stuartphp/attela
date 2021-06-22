@@ -1,16 +1,8 @@
 @extends('layouts.admin')
 @section('title', __('global.menu.inventory.title'))
 @section('content')
-<div class="row">
-    <div class="col-9"><div class="form-heading ms-2">Prices</div></div>
-    <div class="col-3 text-end">
-        <div class="row">
-            <div class="col-1"><a href="#" onclick="$('#form_price').toggle()"><i class="bi bi-plus" id="inv_price_add_close"></i></a></div>
-            <div class="col-3"><input type="text" wire:model.debounce.300ms="size" name="size" class="form-control form-control-sm"/></div>
-            <div class="col-8"><input type="text" wire:model.lazy="search" name="search" class="form-control form-control-sm"/></div>
-        </div>
-    </div>
-</div>
+
+@livewire('test-component')
 <form method="post" id="form_price" enctype="multipart/form-data">
     @csrf
     <input type="hidden" id="price_action" value="add"/>
@@ -91,7 +83,7 @@
         </div>
     </div>
 </form>
-@livewire('test-component')
+
 @endsection
 @section('scripts')
 <script>

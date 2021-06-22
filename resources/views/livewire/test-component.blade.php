@@ -1,56 +1,258 @@
-<div>
-    
+@extends('layouts.admin')
+@section('title', __('global.menu.inventory.title'))
+@section('css')
+<link href="/vendors/summernote/summernote-lite.css" rel="stylesheet">
+@endsection
+@section('content')
 
-<div class="table-responsive" id="priceTable">
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th>Store</th>
-                <th class="text-center">cost_price</th>
-                <th class="text-center">retail</th>
-                <th class="text-center">dealer</th>
-                <th class="text-center">whole_sale</th>
-                <th class="text-center">price_list1</th>
-                <th class="text-center">price_list2</th>
-                <th class="text-center">price_list3</th>
-                <th class="text-center">price_list4</th>
-                <th class="text-center">price_list5</th>
-                <th class="text-center">special</th>
-                <th class="text-center">special_from</th>
-                <th class="text-center">special_to</th>
-                <th class="text-end">Action</th>
-            </tr>
-        </thead>
-        <tbody>
-        @foreach ($prices as $price)
-            <tr>
-                <td>{{ $price->store }}</td>
-                <td class="text-end">{{ number_format($price->cost_price,2) }}</td>
-                <td class="text-end">{{ number_format($price->retail,2) }}</td>
-                <td class="text-end">{{ number_format($price->dealer,2) }}</td>
-                <td class="text-end">{{ number_format($price->whole_sale,2) }}</td>
-                <td class="text-end">{{ number_format($price->price_list1,2) }}</td>
-                <td class="text-end">{{ number_format($price->price_list2,2) }}</td>
-                <td class="text-end">{{ number_format($price->price_list3,2) }}</td>
-                <td class="text-end">{{ number_format($price->price_list4,2) }}</td>
-                <td class="text-end">{{ number_format($price->price_list5,2) }}</td>
-                <td class="text-end">{{ number_format($price->special,2) }}</td>
-                <td class="text-center">{{ $price->special_from }}</td>
-                <td class="text-center">{{ $price->special_to }}</td>
-                <td class="col-1"><select class="inv_price_action form-select" id="pri_{{ $price->inventory_item_id }}_{{ $price->id }}">
-                    <option value="">{{ __('global.select') }}</option>
-                    <option value="Copy">{{ __('global.copy') }}</option>
-                    <option value="Edit">{{ __('global.edit') }}</option>
-                    <option value="Delete">{{ __('global.delete') }}</option>
-                    </select></td>
-            </tr>
-        @endforeach
-    </tbody>
-    <tfoot>
-        <tr>
-            <td colspan="14">{{ $prices->links() }}</td>
-        </tr>
-    </tfoot>
-    </table>
+<div id="loadImg"><img src="/images/ajax-loader.gif" width="100px"/></div>
+<div id="result" class="content-panel" style="background-color: #ffffff">
+    <a href="#" onclick="openNav()"><i class="bi bi-list"></i></a>
+    <!-- Display Dashboard stuff-->
+    <div class="row ms-2 mt-2">
+        <div class="card me-3 mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        <div class="card me-3 mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        <div class="card me-3 mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        <div class="card me-3 mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        <div class="card me-3 mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        <div class="card me-3 mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        <div class="card me-3 mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+    </div>
 </div>
+<div id="mySidenav" class="sidenav">
+    <livewire:inventory.inventory-list/>
 </div>
+
+@endsection
+@section('scripts')
+<script type="text/javascript" src="/vendors/summernote/summernote-lite.js"></script>
+<script>
+    function openNav() {
+  document.getElementById("mySidenav").style.width = ""+sideMenu+"px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+    $(function(){
+        $('#loadImg').hide();
+        openNav();
+    });
+
+    function getDetail(id)
+    {
+        $('#loadImg').show();
+        closeNav();
+        $('.list-group-item').removeClass('active');
+        $('#I'+id).addClass('active');
+        $.ajax({
+            url:'/inventory/items/'+id,
+            method:'GET',
+            dataType:'html',
+            success: function(response){
+                $('#result').html(response);
+            }
+        });
+        $('#loadImg').hide();
+    }
+    $('#create_record').click(function(){
+        closeNav();
+        $('.list-group-item').removeClass('active');
+        $.ajax({
+            url:'/inventory/items/create',
+            method:'GET',
+            dataType:'html',
+            success: function(response){
+                $('#result').html(response);
+            }
+        });
+    })
+
+
+</script>
+@endsection
+@extends('layouts.admin')
+@section('title', __('global.menu.inventory.title'))
+@section('css')
+<link href="/vendors/summernote/summernote-lite.css" rel="stylesheet">
+@endsection
+@section('content')
+
+<div id="loadImg"><img src="/images/ajax-loader.gif" width="100px"/></div>
+<div id="result" class="content-panel" style="background-color: #ffffff">
+    <a href="#" onclick="openNav()"><i class="bi bi-list"></i></a>
+    <!-- Display Dashboard stuff-->
+    <div class="row ms-2 mt-2">
+        <div class="card me-3 mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        <div class="card me-3 mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        <div class="card me-3 mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        <div class="card me-3 mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        <div class="card me-3 mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        <div class="card me-3 mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        <div class="card me-3 mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="mySidenav" class="sidenav">
+    <livewire:inventory.inventory-list/>
+</div>
+
+@endsection
+@section('scripts')
+<script type="text/javascript" src="/vendors/summernote/summernote-lite.js"></script>
+<script>
+    function openNav() {
+  document.getElementById("mySidenav").style.width = ""+sideMenu+"px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+    $(function(){
+        $('#loadImg').hide();
+        openNav();
+    });
+
+    function getDetail(id)
+    {
+        $('#loadImg').show();
+        closeNav();
+        $('.list-group-item').removeClass('active');
+        $('#I'+id).addClass('active');
+        $.ajax({
+            url:'/inventory/items/'+id,
+            method:'GET',
+            dataType:'html',
+            success: function(response){
+                $('#result').html(response);
+            }
+        });
+        $('#loadImg').hide();
+    }
+    $('#create_record').click(function(){
+        closeNav();
+        $('.list-group-item').removeClass('active');
+        $.ajax({
+            url:'/inventory/items/create',
+            method:'GET',
+            dataType:'html',
+            success: function(response){
+                $('#result').html(response);
+            }
+        });
+    })
+
+
+</script>
+@endsection
